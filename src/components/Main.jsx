@@ -18,7 +18,7 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
   Radar,
-} from "recharts";
+} from "recharts"
 
 const Main = () => {
   const data = [
@@ -66,43 +66,43 @@ const Main = () => {
     },
   ];
   const info = [
-  {
-    "subject": "Rent",
-    "A": 120,
-    "B": 110,
-    "fullMark": 150
-  },
-  {
-    "subject": "Food",
-    "A": 98,
-    "B": 130,
-    "fullMark": 150
-  },
-  {
-    "subject": "Shop",
-    "A": 86,
-    "B": 130,
-    "fullMark": 150
-  },
-  {
-    "subject": "Trans",
-    "A": 99,
-    "B": 100,
-    "fullMark": 150
-  },
-  {
-    "subject": "bill",
-    "A": 85,
-    "B": 90,
-    "fullMark": 150
-  },
-  {
-    "subject": "Enter",
-    "A": 65,
-    "B": 85,
-    "fullMark": 150
-  }
-]
+    {
+      subject: "Rent",
+      A: 120,
+      B: 110,
+      fullMark: 150,
+    },
+    {
+      subject: "Food",
+      A: 98,
+      B: 130,
+      fullMark: 150,
+    },
+    {
+      subject: "Shop",
+      A: 86,
+      B: 130,
+      fullMark: 150,
+    },
+    {
+      subject: "Trans",
+      A: 99,
+      B: 100,
+      fullMark: 150,
+    },
+    {
+      subject: "bill",
+      A: 85,
+      B: 90,
+      fullMark: 150,
+    },
+    {
+      subject: "Enter",
+      A: 65,
+      B: 85,
+      fullMark: 150,
+    },
+  ];
 
   return (
     <div className="h-full p-4">
@@ -153,7 +153,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="chart h-[250px] mt-8 w-full m-auto">
+      <div className="chart h-[250px] mt-6 w-full m-auto">
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={data}>
             <XAxis dataKey="name" />
@@ -183,30 +183,29 @@ const Main = () => {
         <div className="">
           <h1 className="text-[18px] font-semibold">Basic Expense</h1>
           <div className="mt-2">
-            <RadarChart outerRadius={80} width={250} height={200} data={info} className="text-[14px]">
+            <RadarChart
+              outerRadius={80}
+              width={250}
+              height={200}
+              data={info}
+              className="text-[14px]"
+            >
               <PolarGrid />
               <PolarAngleAxis dataKey="subject" />
               <PolarRadiusAxis angle={30} domain={[0, 150]} />
               <Radar
-                name="Mike"
                 dataKey="A"
                 stroke="#8884d8"
                 fill="#8884d8"
                 fillOpacity={0.6}
-              />
-              <Radar
-                name="Lily"
-                dataKey="B"
-                stroke="#82ca9d"
-                fill="#82ca9d"
-                fillOpacity={0.6}
+                dot="true"
               />
               <Legend />
             </RadarChart>
           </div>
         </div>
         <div className="">
-          <h1>Transaction History</h1>
+          <h1 className="text-[18px] font-semibold">Transaction History</h1>
         </div>
       </div>
     </div>

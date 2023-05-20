@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Register = () => {
   const navigate = useNavigate();
   return (
-    <div className="cont flex justify-between h-full">
+    <div className="cont flex justify-between h-full p-4">
       <div className="left bg-blue-500 rounded-2xl flex-1 relative">
         <div className="flex justify-center h-full items-center">
           <div class="area">

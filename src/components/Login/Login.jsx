@@ -7,7 +7,7 @@ import { Typewriter } from "react-simple-typewriter";
 const Login = () => {
   const navigate = useNavigate();
   return (
-    <div className="cont flex justify-between h-full">
+    <div className="cont flex justify-between h-full p-4">
       <div className="left flex-1">
         <div className="flex justify-center items-center h-full flex-col px-16">
           <img src={img} alt="" srcset="" className="max-w-[180px] mb-6" />

@@ -1,6 +1,7 @@
 import React from "react";
 import img from "./login.png";
 import { useNavigate } from "react-router-dom";
+import { Typewriter } from "react-simple-typewriter";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -22,7 +23,25 @@ const Register = () => {
               <li></li>
             </ul>
           </div>
-          <div className="card w-3/4 h-[400px] absolute m-auto">
+          <div className="card w-3/4 h-[400px] absolute m-auto p-4">
+            <h1 className="text-[40px] font-extrabold text-white">
+              Say goodbye to your <br />
+               <span className="text-blue-500">
+                <Typewriter
+                  words={["financial", "expenses", "creditors"]}
+                  loop={5}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={60}
+                  delaySpeed={800}
+                />
+              </span><br />problems with <span className="text-slate-800">Cyrotec</span>
+            </h1>
+            <p className="text-slate-300 text-[12px]">
+              Take control of your small leaks since they can sink your great
+              ship
+            </p>
           </div>
         </div>
       </div>

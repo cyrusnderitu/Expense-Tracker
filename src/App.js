@@ -27,7 +27,7 @@ function App() {
   ]);
   return (
     <div className="App bg-slate-200 h-screen">
-      <Layout>
+      <Layout className="">
         <React.StrictMode>
           <RouterProvider router={route} />
         </React.StrictMode>

@@ -19,6 +19,7 @@ import {
   PolarRadiusAxis,
   Radar,
 } from "recharts"
+import History from "./History";
 
 const Main = () => {
   const data = [
@@ -103,7 +104,35 @@ const Main = () => {
       fullMark: 150,
     },
   ];
-
+  const f = Intl.DateTimeFormat("en-us", {
+    dateStyle: "short",
+  });
+  const history = [
+    {
+      date: f.format(),
+      name: "James",
+      bank: "Equity",
+      cash: "$1000"
+    },
+    {
+      date: f.format(),
+      name: "Kelvin",
+      bank: "Barclays",
+      cash: "$2100"
+    },
+    {
+      date: f.format(),
+      name: "Mary",
+      bank: "Absa",
+      cash: "$3100"
+    },
+    {
+      date: f.format(),
+      name: "Eliud",
+      bank: "Co-op",
+      cash: "$900"
+    }
+  ]
   return (
     <div className="h-full p-4">
       <div className="grid md:grid-cols-3">
@@ -204,8 +233,13 @@ const Main = () => {
             </RadarChart>
           </div>
         </div>
-        <div className="">
-          <h1 className="text-[18px] font-semibold">Transaction History</h1>
+        <div className="w-full">
+          <h1 className="text-[18px] font-semibold ">Transaction History</h1>
+          <div className="overflow-scroll">
+            {history && history.map((item)=>(
+              <History history={item}/>
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -109,28 +109,39 @@ const Main = () => {
   });
   const history = [
     {
+      id: 1,
       date: f.format(),
       name: "James",
       bank: "Equity",
       cash: "$1000"
     },
     {
+      id: 2,
       date: f.format(),
       name: "Kelvin",
       bank: "Barclays",
       cash: "$2100"
     },
     {
+      id: 3,
       date: f.format(),
       name: "Mary",
       bank: "Absa",
       cash: "$3100"
     },
     {
+      id: 4,
       date: f.format(),
       name: "Eliud",
       bank: "Co-op",
       cash: "$900"
+    },
+    {
+      id: 5,
+      date: f.format(),
+      name: "Charles",
+      bank: "Africa",
+      cash: "$9000"
     }
   ]
   return (
@@ -235,9 +246,9 @@ const Main = () => {
         </div>
         <div className="w-full">
           <h1 className="text-[18px] font-semibold ">Transaction History</h1>
-          <div className="overflow-scroll">
+          <div className="overflow-y-scroll">
             {history && history.map((item)=>(
-              <History history={item}/>
+              <History key={item.id} history={item}/>
             ))}
           </div>
         </div>

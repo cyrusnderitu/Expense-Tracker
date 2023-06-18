@@ -1,10 +1,35 @@
 import React from "react";
 import {BsThreeDots} from 'react-icons/bs'
+import Payment from "./Payment";
 
 const Side = () => {
+  const payment = [
+    {
+      id: 1,
+      name: "Amazon",
+      price: 1000
+    },
+    {
+      id: 2,
+      name: "Internet",
+      price: 800
+    },
+    {
+      id: 3,
+      name: "Netflix",
+      price: 1100
+    },
+    {
+      id: 4,
+      name: "Bills",
+      price: 1220
+    }
+  ]
   return (
     <div className="bg-slate-400 h-full p-4 overflow-hidden">
-      <div className="w-full h-[160px] rounded-lg bg-green-300"></div>
+      <div className="w-full h-[160px] rounded-lg bg-green-300">
+
+      </div>
       <div className="sends mt-4">
         <div className="display flex justify-between items-center">
           <h2 className="font-bold">Quick send</h2>
@@ -31,6 +56,11 @@ const Side = () => {
           <div className="flex justify-between itmes-center">
             <h2 className="font-bold">Card Payments</h2>
             <BsThreeDots />
+          </div>
+          <div className="overflow-y-scroll px-2">
+            {payment && payment.map((item)=>(
+              <Payment key={item.id} payment={item}/>
+            ))}
           </div>
       </div>
     </div>
